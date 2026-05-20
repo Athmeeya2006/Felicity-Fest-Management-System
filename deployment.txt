@@ -5,7 +5,7 @@ Frontend URL: https://felicity-frontend.vercel.app
 Backend URL:  https://felicity-backend.onrender.com
 Database:     MongoDB Atlas (connection via MONGODB_URI env variable)
 
-Admin Login:  admin@felicity.com / Admin@123
+Admin Login:  admin@felicity.com
 
 =========================================================
 STEP-BY-STEP DEPLOYMENT PROCEDURE
@@ -48,7 +48,6 @@ STEP 2 -- BACKEND (Render)
        SMTP_PASS       = (Gmail App Password from myaccount.google.com/apppasswords)
        FRONTEND_URL    = https://felicity-frontend.vercel.app
        ADMIN_EMAIL     = admin@felicity.com
-       ADMIN_PASSWORD  = Admin@123
        NODE_ENV        = production
   6. Click "Create Web Service". Render will build and deploy.
   7. Copy the live URL (e.g. https://felicity-backend.onrender.com).
@@ -73,7 +72,7 @@ STEP 3 -- FRONTEND (Vercel)
 STEP 4 -- POST-DEPLOYMENT VERIFICATION
 -----------------------------------
   1. Open the Frontend URL in a browser.
-  2. Log in with admin@felicity.com / Admin@123.
+  2. Log in with admin@felicity.com.
   3. Test signup, login, event browsing, event creation.
   4. If CORS errors appear, verify FRONTEND_URL env var in Render
      matches the Vercel URL exactly, then redeploy.
@@ -84,4 +83,4 @@ LOCAL QUICK-START (for development)
   cd backend  && npm install && npm run dev     (runs on port 5000)
   cd frontend && npm install && npm run dev     (runs on port 5173)
   Open http://localhost:5173
-  Admin login: admin@felicity.com / Admin@123
+  Admin login: admin@felicity.com

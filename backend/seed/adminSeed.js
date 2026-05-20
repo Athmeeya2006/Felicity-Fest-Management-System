@@ -20,13 +20,12 @@ const seedAdmin = async () => {
     // Create admin
     const admin = new Admin({
       email: process.env.ADMIN_EMAIL || 'admin@felicity.com',
-      password: process.env.ADMIN_PASSWORD || 'Admin@123',
+      password: process.env.ADMIN_PASSWORD,
     });
 
     await admin.save();
     console.log('Admin seeded successfully');
     console.log('Email:', admin.email);
-    console.log('Password:', process.env.ADMIN_PASSWORD || 'Admin@123');
 
     process.exit(0);
   } catch (error) {

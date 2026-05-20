@@ -328,7 +328,6 @@ SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_app_password
 FRONTEND_URL=http://localhost:5173
 ADMIN_EMAIL=admin@felicity.com
-ADMIN_PASSWORD=Admin@123
 NODE_ENV=development
 ```
 
@@ -357,7 +356,7 @@ npm run dev
 - **Backend API:** http://localhost:5000/api
 - **Health check:** http://localhost:5000/api/health
 
-An admin account is automatically seeded on first server startup using the `ADMIN_EMAIL` and `ADMIN_PASSWORD` values from `backend/.env`.
+An admin account is automatically seeded on first server startup using the `ADMIN_EMAIL` and password values from `backend/.env`.
 
 ---
 
@@ -376,7 +375,6 @@ An admin account is automatically seeded on first server startup using the `ADMI
 | `SMTP_PASS` | No | SMTP sender password / app password |
 | `FRONTEND_URL` | No | Frontend origin for CORS and email links (default: http://localhost:5173) |
 | `ADMIN_EMAIL` | No | Auto-seeded admin email (default: admin@felicity.com) |
-| `ADMIN_PASSWORD` | No | Auto-seeded admin password (default: Admin@123) |
 | `NODE_ENV` | No | Set to `production` to enable static file serving and SPA fallback |
 | `VITE_API_URL` | Yes | Frontend environment variable pointing to the backend API base URL |
 
@@ -387,6 +385,5 @@ An admin account is automatically seeded on first server startup using the `ADMI
 An admin account is created automatically on server startup if one does not already exist.
 
 - **Email:** `admin@felicity.com`
-- **Password:** `Admin@123`
 
-> Change these via `ADMIN_EMAIL` and `ADMIN_PASSWORD` in `backend/.env` before deploying to production.
+> Change these via `ADMIN_EMAIL` in `backend/.env` before deploying to production.

@@ -60,7 +60,7 @@
 4. Replace `<password>` with your user password
 5. Example:
    ```
-   mongodb+srv://felicity_admin:PASSWORD@felicity-cluster.abc123.mongodb.net/felicity?retryWrites=true&w=majority
+   mongodb+srv://felicity_admin:<YOUR_PASSWORD>@felicity-cluster.abc123.mongodb.net/felicity?retryWrites=true&w=majority
    ```
 
 ---
@@ -95,7 +95,7 @@ In Render dashboard:
 3. Add all variables:
    ```
    PORT=3000
-   MONGODB_URI=mongodb+srv://felicity_admin:PASSWORD@felicity-cluster.abc123.mongodb.net/felicity
+   MONGODB_URI=mongodb+srv://felicity_admin:<YOUR_PASSWORD>@felicity-cluster.abc123.mongodb.net/felicity
    JWT_SECRET=your_generated_secret_here
    JWT_EXPIRY=7d
    BCRYPT_ROUNDS=12
@@ -105,7 +105,6 @@ In Render dashboard:
    SMTP_PASS=your_app_password
    FRONTEND_URL=https://felicity-event.vercel.app
    ADMIN_EMAIL=admin@felicity.com
-   ADMIN_PASSWORD=Admin@123
    NODE_ENV=production
    ```
 
@@ -185,7 +184,7 @@ curl https://felicity-backend.onrender.com/api/health
 # Option 1: Via API (after backend deployment)
 curl -X POST https://felicity-backend.onrender.com/api/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"email":"admin@felicity.com","password":"Admin@123"}'
+  -d '{"email":"admin@felicity.com","password":"<YOUR_PASSWORD>"}'
 
 # Option 2: Seed script
 # SSH into Render and run: node seed/adminSeed.js
@@ -362,7 +361,6 @@ curl https://felicity-backend.onrender.com/api/health
 
 ### Before Going Live
 - [ ] Generate strong JWT secret: `openssl rand -base64 32`
-- [ ] Use unique admin password
 - [ ] Enable MongoDB encryption at rest
 - [ ] Set up MongoDB IP restrictions (production-only)
 - [ ] Enable HTTPS everywhere (auto on Vercel/Render)
@@ -438,7 +436,6 @@ TESTING
 - **Health Check**: https://felicity-backend.onrender.com/api/health
 - **Admin Login**: https://felicity-event.vercel.app/login
   - Email: `admin@felicity.com`
-  - Password: `Admin@123`
 
 ---
 
