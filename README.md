@@ -1,7 +1,6 @@
 # Felicity Fest Management System
 
-A full-stack MERN (MongoDB, Express.js, React, Node.js) application for managing college fest events, merchandise, and club discovery. Built as part of the DASS (Design and Analysis of Software Systems) course at IIIT Hyderabad.
-
+A full-stack MERN (MongoDB, Express.js, React, Node.js) application for managing college fest events, merchandise, and club discovery.
 ---
 
 ## Table of Contents
